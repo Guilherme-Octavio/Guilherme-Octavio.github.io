@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/Codes/style.css">
+    <link type="text/css" rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/style.css">
+
     <title>Meu site</title>
 </head>
-<body>
-    <script src="/Codes/main.js"></script>
+<body >
+    <script src="/main.js"></script>
     <script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- {start} parte para deixar a barra colorida -->
+    <div id="propressbar"></div>
+    <div id="scrollPath"></div>
+    <script type="text/javascript">
+        let progress = document.getElementById('propressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+    <!-- {end} parte para deixar a barra colorida -->
     
 </body>
 </html>
