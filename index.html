@@ -9,71 +9,73 @@
 
     <title>Meu site</title>
 </head>
-<body >
+<body>
     <script src="/main.js"></script>
     <script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- {start} parte para deixar a scrollbar colorida -->
 
-    <div id="propressbar"></div>
+    <div id="progressBar"></div>
     <div id="scrollPath"></div>
 
-    <script type="text/javascript">
-        $(window).load(function(){
-            $(window).scroll(function() {
-                var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
-        console.log(wintop);
-        var totalScroll = (wintop/(docheight-winheight))*100;
-        console.log("total scroll" + totalScroll);
-        $(".propressbar").css("width",totalScroll+"%");
-  });
+ 
+<!-- {end} parte para deixar a scrollbar colorida -->
+<!-- a TAG section é essencial para o funcionamento -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+    
+                <div class="col-sd-6" id="title">
+                Guilherme Octávio
+                </div>
+            
+                <div class="col-sd-6" id="subtitle">
+                Back-end & Data science
+                </div>
+    
+            </div>
+    
+            <div class="" id="">
+    
+            </div>
+    
+            <div class="" id="">
+    
+            </div>
+    
+            <div class="" id="">
+    
+            </div>
+    
+            <div class="" id="">
+    
+            </div>
+    
+            <div class="" id="">
+    
+            </div>
+    
+            <div class="" id="">
+    
+            </div>
+    
+        </div> 
 
-});
+        <div class="rodape">
+            <p id="copy">&copy;<strong>Guilherme Octávio</strong></p>
+        </div>
+        
+    </section>
+    <script type="text/javascript">
+        let progress = document.getElementById('progressBar')
+        let totalHeight = document.body.scrollHeight - window.innerHeight
+        window.onscroll = function() {
+        let progressHeight = (window.pageYOffset / totalHeight) * 100
+        progress.style.height = progressHeight + '%'
+}
     </script>
 
-    <!-- {end} parte para deixar a scrollbar colorida -->
 
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-sd-6" id="title">
-            Guilherme Octávio
-            </div>
-        
-            <div class="col-sd-6" id="subtitle">
-            Back-end & Data science
-            </div>
-
-        </div>
-
-        <div class="" id="">
-
-        </div>
-
-        <div class="" id="">
-
-        </div>
-
-        <div class="" id="">
-
-        </div>
-
-        <div class="" id="">
-
-        </div>
-
-        <div class="" id="">
-
-        </div>
-
-        <div class="" id="">
-
-        </div>
-
-    </div> 
-
-    <p id="copy">&copy;<strong>Guilherme Octávio</strong></p>
-    
 </body>
 </html>
