@@ -22,23 +22,15 @@
  
 <!-- {end} parte para deixar a scrollbar colorida -->
 <!-- a TAG section é essencial para o funcionamento -->
-    <section>
-            
-            <button id="hamburger" aria-pressed="false" tabindex="1">
-                        a
-                        <span class="first"></span>
-                        <span class="second"></span>
-                        <span class="third"></span>
-
-            </button>
+    
             <div class="row">
     
                 <div class="col-sd-6" id="title">
-                Guilherme Octávio
+                    Guilherme Octávio
                 </div>
             
                 <div class="col-sd-6" id="subtitle">
-                Back-end & Data science
+                    Back-end & Data science
                 </div>
     
             </div>
@@ -73,14 +65,14 @@
             <p id="copy"><strong>&copy; Guilherme Octávio</strong></p>
         </div>
         
-    </section>
+    
     <script type="text/javascript">
         let progress = document.getElementById('progressBar')
         let totalHeight = document.body.scrollHeight - window.innerHeight
         window.onscroll = function() {
         let progressHeight = (window.pageYOffset / totalHeight) * 100
         progress.style.height = progressHeight + '%'
-}
+        }
     </script>
 
 
